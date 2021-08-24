@@ -74,7 +74,7 @@ function GetDrivers(
     request = HTTP.get(URL)
 
     if request.status ≠ 200
-        throw @NotFoundError("Unsuccessful request.")
+        throw(NotFoundError("Unsuccessful request."))
     end
 
     json = String(request.body) |> JSON3.read
