@@ -11,23 +11,23 @@ using HTTP, JSON3, JSONTables, DataFrames
         standing::String=""
     )
 
-    Returns a `Drivers` DataFrame containing the Drivers' Data specified by the keyword
-    arguments from the Ergast API.
+Returns a `Drivers` DataFrame containing the Drivers' Data specified by the keyword
+arguments from the Ergast API.
 
-    # Keywords
-    - `circuit::String`: the circuit where the GP was hosted
-    - `cons::String`: the constructor team
-    - `qualy::String`: the position obtained at qualifying session
-    - `result::String`: the position obtained at the end of the race
-    - `fastest::String`: the position obtained by the fastest lap of the race
-    - `year::String`: the year when the GP occurred
-    - `standing::String`: the standing of the Drivers Championship at the end of the season
+# Keyword arguments:
+- `circuit::String`: the circuit where the GP was hosted
+- `cons::String`: the constructor team
+- `qualy::String`: the position obtained at qualifying session
+- `result::String`: the position obtained at the end of the race
+- `fastest::String`: the position obtained by the fastest lap of the race
+- `year::String`: the year when the GP occurred
+- `standing::String`: the standing of the Drivers Championship at the end of the season
 
-    # Returns
-    - `Drivers`: the DataFrame containing the data related to the query specified.
+# Returns:
+- `Drivers`: the DataFrame containing the data related to the query specified.
 
-    # Throws
-    - `NotFoundError`: I guess we could throw an error if the request is not successful.
+# Throws:
+- `NotFoundError`: I guess we could throw an error if the request is not successful.
 """
 function GetDrivers(
     ;circuit::String="",
