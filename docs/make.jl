@@ -20,4 +20,5 @@ makedocs(;
 
 deploydocs(;
     repo="github.com/eduardosalaz/Ergast.jl",
+    devbranch = "main"
 )
